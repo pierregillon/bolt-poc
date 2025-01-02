@@ -1,15 +1,17 @@
-import React from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Period } from '../types/todo';
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Period } from "../types/todo";
 
-const periods: Period[] = ['today', 'week', 'month', 'quarter', 'year'];
+const periods: Period[] = ["today", "week", "month", "quarter", "year"];
 
 interface PeriodSelectorProps {
   currentPeriod: Period;
   onPeriodChange: (period: Period) => void;
 }
 
-export function PeriodSelector({ currentPeriod, onPeriodChange }: PeriodSelectorProps) {
+export function PeriodSelector({
+  currentPeriod,
+  onPeriodChange,
+}: PeriodSelectorProps) {
   const currentIndex = periods.indexOf(currentPeriod);
 
   const handlePrevious = () => {
@@ -33,11 +35,11 @@ export function PeriodSelector({ currentPeriod, onPeriodChange }: PeriodSelector
       >
         <ChevronLeft size={20} />
       </button>
-      
+
       <span className="text-lg font-medium capitalize min-w-[100px] text-center">
         {currentPeriod}
       </span>
-      
+
       <button
         onClick={handleNext}
         disabled={currentIndex === periods.length - 1}

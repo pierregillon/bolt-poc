@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test:e2e": "playwright test",
+    "test:e2e:watch": "playwright-watch exec npm run test:e2e",
     "test:e2e:ui": "playwright test --ui"
   },
   "dependencies": {
@@ -28,6 +29,7 @@
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.11",
     "globals": "^15.9.0",
+    "playwright-watch": "^1.3.23",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
     "ts-node": "^10.9.2",
